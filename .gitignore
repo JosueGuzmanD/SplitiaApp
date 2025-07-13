@@ -45,3 +45,9 @@ project.lock.json
 # Rider
 .idea/
 *.sln.iml
+
+# Generated cache and info files
+*.cache
+*.info
+*.xml
+*.assemblyinfo
