@@ -9,6 +9,7 @@ public class Split : AuditEntity
     public List<Expenditure> Expenditures { get; private set; }
     public List<Income> Incomes { get; private set; }
 
+    private Split() {}
     public Split(string title, SplitEmoji? emoji, Guid userId, List<Guid> users) : base(userId)
     {
         Expenditures = new List<Expenditure>();

@@ -2,11 +2,16 @@ namespace Splitia.Domain;
 
 public abstract class AuditEntity
 {
+    public Guid Id { get; private set; } 
     public DateTime CreatedAt { get; protected set; }
     public DateTime? UpdatedAt { get; protected set; }
     public Guid CreatedBy { get; protected set; }
     public Guid? UpdatedBy { get; protected set; }
 
+    protected AuditEntity()
+    {
+        
+    }
     protected AuditEntity(Guid createdBy)
     {
         CreatedAt = DateTime.UtcNow;

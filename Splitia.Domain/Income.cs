@@ -8,6 +8,10 @@ public class Income : AuditEntity
     public DateTime Timestamp { get; private set; }
     public Guid UserId { get; private set; }
 
+    private Income()
+    {
+    }
+
     public Income(Guid splitId, Concept concept, long amount, DateTime timestamp, Guid userId) : base(userId)
     {
         Concept = null!;

@@ -3,9 +3,13 @@
 public sealed record Concept
 {
     public string Title { get; }
-    public string Description { get; }
+    public string? Description { get; }
 
-    public Concept(string title, string description)
+    private Concept()
+    {
+        
+    }
+    public Concept(string title, string? description)
     {
         if (string.IsNullOrWhiteSpace(title))
             throw new ArgumentException("Title cannot be empty.");

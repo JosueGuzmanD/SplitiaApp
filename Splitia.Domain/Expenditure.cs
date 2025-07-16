@@ -7,6 +7,10 @@ public class Expenditure : AuditEntity
     public long Amount { get; private set; }
     public Guid UserId { get; private set; }
 
+    private Expenditure()
+    {
+    }
+
     public Expenditure(Guid splitId, Concept concept, long amount, Guid userId) : base(userId)
     {
         Concept = null!;

@@ -1,8 +1,15 @@
+using Microsoft.EntityFrameworkCore;
+using Splitia.Infrastructure.DbContext;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
+
+// Add DbContext
+builder.Services.AddDbContext<SplitiaContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("SQLDatabase")));
 
 var app = builder.Build();
 
