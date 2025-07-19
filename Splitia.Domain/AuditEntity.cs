@@ -7,6 +7,8 @@ public abstract class AuditEntity
     public DateTime? UpdatedAt { get; protected set; }
     public Guid CreatedBy { get; protected set; }
     public Guid? UpdatedBy { get; protected set; }
+    public bool IsDeleted { get; protected set; }
+    public DateTime? DeletedAt { get; protected set; }
 
     protected AuditEntity()
     {
@@ -17,6 +19,13 @@ public abstract class AuditEntity
         CreatedAt = DateTime.UtcNow;
         CreatedBy = createdBy;
     }
+
+    public void SetAsDeleted()
+    {
+        IsDeleted = true;
+        DeletedAt = DateTime.UtcNow;
+    }
+    
 
     public void SetUpdated(Guid updatedBy)
     {

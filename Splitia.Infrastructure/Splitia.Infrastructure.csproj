@@ -16,7 +16,9 @@
     </ItemGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\Splitia.Application\Splitia.Application.csproj" />
       <ProjectReference Include="..\Splitia.Domain\Splitia.Domain.csproj" />
     </ItemGroup>
+
 
 </Project>
