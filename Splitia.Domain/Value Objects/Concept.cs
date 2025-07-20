@@ -1,14 +1,17 @@
-﻿namespace Splitia.Domain;
+﻿using System.Diagnostics.CodeAnalysis;
+
+namespace Splitia.Domain;
 
 public sealed record Concept
 {
     public string Title { get; }
     public string? Description { get; }
 
+    [ExcludeFromCodeCoverage]
     private Concept()
     {
-        
     }
+
     public Concept(string title, string? description)
     {
         if (string.IsNullOrWhiteSpace(title))

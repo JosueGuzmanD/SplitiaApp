@@ -1,3 +1,5 @@
+using System.Diagnostics.CodeAnalysis;
+
 namespace Splitia.Domain;
 
 public class Expenditure : AuditEntity
@@ -7,6 +9,7 @@ public class Expenditure : AuditEntity
     public long Amount { get; private set; }
     public Guid UserId { get; private set; }
 
+    [ExcludeFromCodeCoverage]
     private Expenditure()
     {
     }

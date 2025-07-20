@@ -1,4 +1,6 @@
-﻿namespace Splitia.Domain;
+﻿using System.Diagnostics.CodeAnalysis;
+
+namespace Splitia.Domain;
 
 public class Income : AuditEntity
 {
@@ -8,6 +10,7 @@ public class Income : AuditEntity
     public DateTime Timestamp { get; private set; }
     public Guid UserId { get; private set; }
 
+    [ExcludeFromCodeCoverage]
     private Income()
     {
     }

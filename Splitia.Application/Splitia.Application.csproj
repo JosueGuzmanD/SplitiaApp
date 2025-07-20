@@ -10,4 +10,8 @@
       <Folder Include="Split\Commands\" />
     </ItemGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\Splitia.Domain\Splitia.Domain.csproj" />
+    </ItemGroup>
+
 </Project>

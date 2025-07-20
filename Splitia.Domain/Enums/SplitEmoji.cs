@@ -1,4 +1,6 @@
-﻿namespace Splitia.Domain;
+﻿using System.Diagnostics.CodeAnalysis;
+
+namespace Splitia.Domain;
 
 public sealed class SplitEmoji
 {
@@ -16,7 +18,11 @@ public sealed class SplitEmoji
     public string Emoji { get; }
     public string Name { get; }
 
-    private SplitEmoji(){}
+    [ExcludeFromCodeCoverage]
+    private SplitEmoji()
+    {
+    }
+
     private SplitEmoji(string emoji, string name)
     {
         Emoji = emoji;

@@ -1,4 +1,6 @@
-﻿namespace Splitia.Domain;
+﻿using System.Diagnostics.CodeAnalysis;
+
+namespace Splitia.Domain;
 
 public class Split : AuditEntity
 {
@@ -9,6 +11,7 @@ public class Split : AuditEntity
     public List<Expenditure> Expenditures { get; private set; }
     public List<Income> Incomes { get; private set; }
 
+    [ExcludeFromCodeCoverage]
     private Split() {}
     public Split(string title, SplitEmoji? emoji, Guid userId, List<Guid> users) : base(userId)
     {

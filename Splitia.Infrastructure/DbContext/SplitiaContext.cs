@@ -19,7 +19,7 @@ public class SplitiaContext : Microsoft.EntityFrameworkCore.DbContext
         modelBuilder.ApplyConfiguration(new ExpenditureConfiguration());
         modelBuilder.ApplyConfiguration(new IncomeConfiguration());
         modelBuilder.ApplyConfiguration(new SplitConfiguration());
-        
+
         base.OnModelCreating(modelBuilder);
     }
 }

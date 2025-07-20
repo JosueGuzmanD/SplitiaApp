@@ -8,8 +8,8 @@ namespace Splitia.Infrastructure.Repos;
 public class GenericRepository<T>(SplitiaContext context) : IGenericRepository<T>
     where T : AuditEntity
 {
-    protected DbSet<T> Entities => context.Set<T>();
-
+    
+    private DbSet<T> Entities => context.Set<T>();
 
     public async Task<T> InsertAsync(T entity)
     {

@@ -1,3 +1,5 @@
+using System.Diagnostics.CodeAnalysis;
+
 namespace Splitia.Domain;
 
 public abstract class AuditEntity
@@ -9,7 +11,7 @@ public abstract class AuditEntity
     public Guid? UpdatedBy { get; protected set; }
     public bool IsDeleted { get; protected set; }
     public DateTime? DeletedAt { get; protected set; }
-
+    [ExcludeFromCodeCoverage]
     protected AuditEntity()
     {
         
